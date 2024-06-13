@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Recipe Manager" Height="450" Width="800">
+    <Grid>
+        <!-- Recipe Name -->
+        <Label Content="Recipe Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0"/>
+        <TextBox x:Name="txtRecipeName" HorizontalAlignment="Left" VerticalAlignment="Top" Width="176" Height="23" Margin="10,23,0,0"/>
+
+        <!-- Ingredient Name -->
+        <Label Content="Ingredient Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,38,0,0"/>
+        <TextBox x:Name="txtIngredientName" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Height="23" Margin="10,61,0,0"/>
+
+        <!-- Quantity -->
+        <Label Content="Quantity:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="149,38,0,0"/>
+        <TextBox x:Name="txtQuantity" HorizontalAlignment="Left" VerticalAlignment="Top" Width="44" Height="23" Margin="149,61,0,0"/>
+
+        <!-- Unit -->
+        <Label Content="Unit:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="201,38,0,0"/>
+        <TextBox x:Name="txtUnit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="44" Height="23" Margin="201,61,0,0"/>
+
+        <!-- Calories -->
+        <Label Content="Calories:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="254,38,0,0"/>
+        <TextBox x:Name="txtCalories" HorizontalAlignment="Left" VerticalAlignment="Top" Width="44" Height="23" Margin="254,61,0,0"/>
+
+        <!-- Food Group -->
+        <Label Content="Food Group:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="306,38,0,0"/>
+        <TextBox x:Name="txtFoodGroup" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Height="23" Margin="306,61,0,0"/>
+
+        <!-- Number of Steps -->
+        <Label Content="Number of Steps:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,75,0,0"/>
+        <TextBox x:Name="txtNumberOfSteps" HorizontalAlignment="Left" VerticalAlignment="Top" Width="176" Height="23" Margin="10,98,0,0"/>
+
+        <!-- Buttons -->
+        <Button x:Name="btnAddRecipe" Content="Add Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Height="22" Margin="402,98,0,0" Click="btnAddRecipe_Click"/>
+        <Button x:Name="btnAddIngredient" Content="Add Ingredient" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Height="22" Margin="402,61,0,0" Click="btnAddIngredient_Click"/>
+        <Button x:Name="btnGenerateSteps" Content="Generate Steps" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Height="22" Margin="201,98,0,0" Click="btnGenerateSteps_Click"/>
+        <Button x:Name="btnDisplayRecipe" Content="Display Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Height="22" Margin="402,216,0,0" Click="btnDisplayRecipe_Click"/>
+
+        <!-- Lists -->
+        <ListBox x:Name="lstRecipes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="176" Height="79" Margin="402,131,0,0"/>
+        <ListBox x:Name="lstIngredients" HorizontalAlignment="Left" VerticalAlignment="Top" Width="201" Height="94" Margin="201,122,0,0"/>
+
+        <!-- Recipe Details -->
+        <TextBox x:Name="txtRecipeDetails" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="377" Height="94" Margin="10,225,0,0"/>
+        <Label x:Name="lblTotalCalories" Content="Total Calories:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="402,253,0,0"/>
+        <Label x:Name="lblWarning" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="402,272,0,0"/>
+
+        <!-- Steps Panel -->
+        <StackPanel x:Name="panelSteps" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Height="94" Margin="10,122,0,0"/>
+    </Grid>
+</Window>
